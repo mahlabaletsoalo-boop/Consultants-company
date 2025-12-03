@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Book Consultation | LT&O Consultant PTY LTD</title>
+  <link rel="stylesheet" href="consult.css">
+</head>
+
+<body>
+
+<!-- MAIN WRAPPER -->
+<div class="container">
+
+  <h1>Book a Consultation</h1>
+  <p class="subtitle">Fill in your details below and we will contact you shortly.</p>
+
+  <form class="consult-form" onsubmit="sendForm(event)">
+    
+    <div class="form-group">
+      <label>Full Name</label>
+      <input type="text" id="name" placeholder="Enter your name" required>
+    </div>
+
+    <div class="form-group">
+      <label>Email Address</label>
+      <input type="email" id="email" placeholder="Enter your email" required>
+    </div>
+
+    <div class="form-group">
+      <label>Phone Number</label>
+      <input type="text" id="phone" placeholder="Enter your phone number" required>
+    </div>
+
+    <div class="form-group">
+      <label>Type of Service</label>
+      <select id="service" required>
+        <option value="">Select Service</option>
+        <option>Safety Compliance</option>
+        <option>Fire Protection Services</option>
+        <option>Transformer Maintenance</option>
+        <option>ISO & IMS Implementation</option>
+        <option>General Enquiry</option>
+      </select>
+    </div>
+
+    <div class="form-group">
+      <label>Your Message</label>
+      <textarea id="message" placeholder="Describe your request..." required></textarea>
+    </div>
+
+    <button type="submit" class="submit-btn">Submit Consultation Request</button>
+
+  </form>
+
+</div>
+
+<script>
+function sendForm(event) {
+  event.preventDefault();
+
+  const name = document.getElementById("name").value;
+  const email = document.getElementById("email").value;
+  const phone = document.getElementById("phone").value;
+  const service = document.getElementById("service").value;
+  const message = document.getElementById("message").value;
+
+  const whatsappMessage = 
+    `New Consultation Request:%0A%0AName: ${name}%0AEmail: ${email}%0APhone: ${phone}%0AService: ${service}%0AMessage: ${message}`;
+
+  // WhatsApp phone number here:
+  window.open(`https://wa.me/27795068862?text=${whatsappMessage}`, "_blank");
+
+  alert("Your request has been submitted! We will contact you shortly.");
+}
+</script>
+
+</body>
+</html>

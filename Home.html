@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>LT&O Consultant PTY LTD | Home</title>
+  <link rel="stylesheet" href="home.css">
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+<nav>
+  <div class="logo">
+    <img src="logo3.png" alt="LT&O Consultant Logo">
+  </div>
+
+  <ul>
+    <li><a href="altservice.html">Services</a></li>
+    <li><a href="aboutus.html">About</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+
+  <div class="menu-icon" onclick="toggleMenu()">&#9776;</div>
+</nav>
+
+<!-- HERO SECTION -->
+<section class="hero" id="home">
+
+  <video autoplay muted loop class="background-video">
+    <source src="Untitled design (1).mp4" type="video/mp4">
+  </video>
+
+  <div class="hero-overlay"></div>
+
+  <div class="hero-content">
+    <h1 class="fade-up">Safety • Fire • Compliance • Technical Services</h1>
+    <p class="fade-up delay1">Your Partner in Safe, Compliant & Efficient Operations</p>
+    <button class="fade-up delay2" onclick="window.location.href='altservice.html'">Get In Touch</button>
+  </div>
+
+</section>
+
+<!-- ABOUT SECTION -->
+<section class="about" id="about">
+  <h2 class="fade-up">Welcome to LT&O Consultant PTY LTD</h2>
+  <p class="fade-up delay1">
+    LT&O Consultant PTY LTD is a professional safety consultancy committed to helping organizations
+    maintain safe, compliant, and risk-free operations across various industries.
+  </p>
+  <p class="fade-up delay2">
+    We specialize in Occupational Health & Safety (OHS), Fire Protection, Transformer Maintenance,
+    and ISO/IMS Implementation.
+  </p>
+</section>
+
+<!-- FOOTER -->
+<footer id="contact">
+  <p><strong>Email:</strong> leratom.lm2@gmail.com</p>
+  <p><strong>Phone:</strong> +27 79 506 8862</p>
+  <p><strong>Address:</strong> Rustenburg & Gauteng, South Africa</p>
+  <p>© 2025 LT&O Consultant PTY LTD</p>
+</footer>
+
+<script>
+function toggleMenu() {
+  const navList = document.querySelector("nav ul");
+  navList.classList.toggle("open");
+}
+
+// Slow down hero video for cinematic effect
+document.querySelector(".background-video").playbackRate = 0.4;
+</script>
+
+</body>
+</html>
+
