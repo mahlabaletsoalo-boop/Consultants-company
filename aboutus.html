@@ -5,9 +5,28 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>About Us | LT&O Consultant PTY LTD</title>
   <link rel="stylesheet" href="aboutus.css">
+
+  <!-- Font Awesome Icons (FIXED) -->
+  <script src="https://kit.fontawesome.com/a2e860f6d4.js" crossorigin="anonymous"></script>
+
 </head>
 
 <body>
+
+<!-- NAVBAR -->
+<nav>
+  <div class="logo">
+    <img src="logo3.png" alt="LT&O Consultant Logo">
+  </div>
+
+  <ul id="menuList">
+    <li><a href="Home.html">Home</a></li>
+    <li><a href="altservice.html">Services</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+
+  <div class="menu-icon" onclick="toggleMenu()">&#9776;</div>
+</nav>
 
 <!-- HERO SECTION -->
 <section class="about-hero">
@@ -21,7 +40,7 @@
   <h2>Who We Are</h2>
   <p class="intro">
     LT&O Consultant PTY LTD is a professional safety and technical consultancy 
-    dedicated to ensuring organizations remain safe, compliant, and operationally stable.
+    dedicated to helping organisations stay compliant, safe, and operationally efficient.
   </p>
 
   <div class="company-grid">
@@ -29,27 +48,29 @@
     <div class="company-card">
       <h3>Our Mission</h3>
       <p>
-        To provide high-quality safety, environmrntal and regulatory compliance solutions which protects people and improve operational efficiency.
+        To provide high-quality safety, environmental and regulatory compliance 
+        solutions that protect people and improve operational efficiency.
       </p>
     </div>
 
     <div class="company-card">
       <h3>Our Vision</h3>
       <p>
-        To become a leading provider of intergrated safety, mining and environmental complaince solutions that empower organisations to operate responsibly and sustainably.
-      </p>
-    
-    </div>
-    <div class="company-card">
-      <h3>Our Values</h3>
-      <p>
-       We uphold ethical and transparent practises in all operations.
-       We mainitain high starndards of service delivery and reliability. 
-       We priorritise the wellbeing of people and environment. We strive for continuous improvement and superior outcomes.
-       We take responsibility for our work and commitments.
+        To become a leading provider of integrated safety, mining, and environmental 
+        compliance solutions that empower organisations to operate responsibly and sustainably.
       </p>
     </div>
 
+    <div class="company-card">
+      <h3>Our Values</h3>
+      <p>
+       We uphold ethical and transparent practices across all operations.<br>
+       We maintain high standards of service delivery and reliability.<br>
+       We prioritise the wellbeing of people and the environment.<br>
+       We strive for continuous improvement and excellence.<br>
+       We take responsibility for our work and commitments.
+      </p>
+    </div>
 
   </div>
 </section>
@@ -67,68 +88,87 @@
 
     <div class="service-box">
       <h4>Fire Protection Services</h4>
-      <p>Fire equipment supply, servicing, installation and compliance inspections.</p>
+      <p>Fire equipment supply, servicing, installation, and compliance inspections.</p>
     </div>
 
     <div class="service-box">
       <h4>Transformer Maintenance</h4>
-      <p>Oil testing, transformer repairs, and preventative maintenance services.</p>
+      <p>Oil testing, transformer repairs, and preventative maintenance.</p>
     </div>
 
     <div class="service-box">
       <h4>ISO & IMS Implementation</h4>
-      <p>ISO9001, ISO45001, ISO14001 and integrated management systems support.</p>
+      <p>ISO 9001, ISO 45001, ISO 14001, and integrated management system support.</p>
     </div>
 
   </div>
 </section>
 
-<!-- TEAM SECTION -->
-<section class="why-us-section">
-  <h2>WHY US</h2>
+<!-- WHY CHOOSE US -->
+<section class="why-us">
+  <h2>Why Choose Us</h2>
 
-  <div class="why-us-container">
+  <div class="why-grid">
 
-    <div class="why-box top-center red-light">
-      Integrity
+    <div class="why-item">
+      <i class="fa-solid fa-shield-heart"></i>
+      <h3>Integrity</h3>
+      <p>We uphold ethical and transparent practices on every project.</p>
     </div>
 
-    <div class="side-box left-box green">
-      Professionalism
+    <div class="why-item">
+      <i class="fa-solid fa-helmet-safety"></i>
+      <h3>Safety First</h3>
+      <p>Your safety is our priority — we ensure compliant, risk-free workplaces.</p>
     </div>
 
-    <div class="side-box right-box green">
-      Safety First
+    <div class="why-item">
+      <i class="fa-solid fa-user-tie"></i>
+      <h3>Professionalism</h3>
+      <p>We deliver accurate and reliable services with industry-leading standards.</p>
     </div>
 
-    <div class="why-box middle red-dark">
-      Excellence
+    <div class="why-item">
+      <i class="fa-solid fa-medal"></i>
+      <h3>Excellence</h3>
+      <p>We strive for superior results through precision and expertise.</p>
     </div>
 
-    <div class="side-box left-bottom green">
-      Innovation
+    <div class="why-item">
+      <i class="fa-solid fa-scale-balanced"></i>
+      <h3>Accountability</h3>
+      <p>We take full responsibility for our work and honour our commitments.</p>
     </div>
 
-    <div class="why-box bottom brown">
-      Accountability
+    <div class="why-item">
+      <i class="fa-solid fa-handshake"></i>
+      <h3>Client Partnership</h3>
+      <p>We build long-term relationships based on trust and collaboration.</p>
     </div>
 
-    <div class="side-box right-bottom green">
-      Client Partnership
+    <div class="why-item">
+      <i class="fa-solid fa-lightbulb"></i>
+      <h3>Innovation</h3>
+      <p>We apply modern, effective and compliant solutions to evolving needs.</p>
     </div>
 
   </div>
 </section>
-
-
 
 <!-- FOOTER -->
-<footer>
+<footer id="contact">
   <p><strong>Email:</strong> leratom.lm2@gmail.com</p>
   <p><strong>Phone:</strong> +27 79 506 8862</p>
   <p><strong>Address:</strong> Rustenburg & Gauteng, South Africa</p>
   <p>© 2025 LT&O Consultant PTY LTD</p>
 </footer>
+
+<!-- MOBILE MENU SCRIPT (FIXED) -->
+<script>
+function toggleMenu() {
+  document.getElementById("menuList").classList.toggle("open");
+}
+</script>
 
 </body>
 </html>
