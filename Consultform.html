@@ -9,32 +9,35 @@
 
 <body>
 
+<!-- BACK BUTTON -->
+<a href="altservice.html" class="back-btn">← Back</a>
+
 <!-- MAIN WRAPPER -->
 <div class="container">
 
   <h1>Book a Consultation</h1>
   <p class="subtitle">Fill in your details below and we will contact you shortly.</p>
 
-  <form class="consult-form" onsubmit="sendForm(event)">
-    
+ <form class="consult-form" action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+
     <div class="form-group">
       <label>Full Name</label>
-      <input type="text" id="name" placeholder="Enter your name" required>
+      <input type="text" name="name" placeholder="Enter your name" required>
     </div>
 
     <div class="form-group">
       <label>Email Address</label>
-      <input type="email" id="email" placeholder="Enter your email" required>
+      <input type="email" name="email" placeholder="Enter your email" required>
     </div>
 
     <div class="form-group">
       <label>Phone Number</label>
-      <input type="text" id="phone" placeholder="Enter your phone number" required>
+      <input type="text" name="phone" placeholder="Enter your phone number" required>
     </div>
 
     <div class="form-group">
       <label>Type of Service</label>
-      <select id="service" required>
+      <select name="service" required>
         <option value="">Select Service</option>
         <option>Safety Compliance</option>
         <option>Fire Protection Services</option>
@@ -46,34 +49,18 @@
 
     <div class="form-group">
       <label>Your Message</label>
-      <textarea id="message" placeholder="Describe your request..." required></textarea>
+      <textarea name="message" placeholder="Describe your request..." required></textarea>
     </div>
+
+    <!-- ✅ Add redirect here -->
+    <input type="hidden" name="_redirect" value="thankyou.html">
 
     <button type="submit" class="submit-btn">Submit Consultation Request</button>
 
-  </form>
+</form>
+
 
 </div>
-
-<script>
-function sendForm(event) {
-  event.preventDefault();
-
-  const name = document.getElementById("name").value;
-  const email = document.getElementById("email").value;
-  const phone = document.getElementById("phone").value;
-  const service = document.getElementById("service").value;
-  const message = document.getElementById("message").value;
-
-  const whatsappMessage = 
-    `New Consultation Request:%0A%0AName: ${name}%0AEmail: ${email}%0APhone: ${phone}%0AService: ${service}%0AMessage: ${message}`;
-
-  // WhatsApp phone number here:
-  window.open(`https://wa.me/27795068862?text=${whatsappMessage}`, "_blank");
-
-  alert("Your request has been submitted! We will contact you shortly.");
-}
-</script>
 
 </body>
 </html>
